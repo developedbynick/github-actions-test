@@ -28,5 +28,7 @@ jobs:
     - run: ls
     - run: npm ci
     - run: npm run build --if-present
+    - run: rm -rf ~/sites/main
+    - run: cd ~/sites && mkdir main
     - run: mv ./build ~/sites/main/
     - run: npm test
